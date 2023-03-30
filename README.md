@@ -43,7 +43,7 @@ Endpoints
 | `UPDATE` | `/api/v1/student/update/` | Modify records of an existing student.  |
 
 
-Add a New Student Example
+Create a New Student Example
 ```
 POST http://localhost:8080/api/v1/student/
 {

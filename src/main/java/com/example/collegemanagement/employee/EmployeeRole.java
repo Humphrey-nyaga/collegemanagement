@@ -5,5 +5,10 @@ public enum EmployeeRole {
     COD,
     DEAN,
     ADMINISTRATOR,
-    TEACHING_ASSISTANT
+    TEACHING_ASSISTANT,
+    RESEARCHER,
+    LIBRARIAN,
+    REGISTRAR,
+    COUNSELOR
 }
+

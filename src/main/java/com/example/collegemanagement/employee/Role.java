@@ -1,7 +1,8 @@
 package com.example.collegemanagement.employee;
 
-public enum EmployeeRole {
+public enum Role {
     PROFESSOR,
+    STUDENT,
     COD,
     DEAN,
     ADMINISTRATOR,

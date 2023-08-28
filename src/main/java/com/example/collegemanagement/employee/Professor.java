@@ -1,10 +1,12 @@
 package com.example.collegemanagement.employee;
 
+import com.example.collegemanagement.department.Department;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "employee")
-public class Employee {
+@Table(name = "professor")
+public class Professor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -22,14 +24,17 @@ public class Employee {
      private String phoneNumber;
 
     @Enumerated(EnumType.STRING)
-    private EmployeeRole employeeRole;
-    @Enumerated(EnumType.STRING)
     private EmployeeContractType employeeContractType;
 
-    public Employee() {
+    @ManyToOne
+    @JoinColumn(name = "department_id")
+    @JsonManagedReference
+    private Department department;
+
+    public Professor() {
     }
 
-    public Employee(String firstName, String lastName, String middleName, String dob, String nationalID, String gender, String email, String phoneNumber, EmployeeRole employeeRole, EmployeeContractType employeeContractType) {
+    public Professor(String firstName, String lastName, String middleName, String dob, String nationalID, String gender, String email, String phoneNumber,  EmployeeContractType employeeContractType) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -38,7 +43,6 @@ public class Employee {
         this.gender = gender;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.employeeRole = employeeRole;
         this.employeeContractType = employeeContractType;
     }
 
@@ -115,13 +119,6 @@ public class Employee {
         this.phoneNumber = phoneNumber;
     }
 
-    public EmployeeRole getEmployeeType() {
-        return employeeRole;
-    }
-
-    public void setEmployeeRole(EmployeeRole employeeRole) {
-        this.employeeRole = employeeRole;
-    }
 
     public EmployeeContractType getEmployeeContractType() {
         return employeeContractType;

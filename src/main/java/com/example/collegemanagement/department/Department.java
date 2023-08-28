@@ -1,11 +1,14 @@
 package com.example.collegemanagement.department;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.collegemanagement.employee.Professor;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@Table(name = "department")
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +21,10 @@ public class Department {
     private int floorNumber;
     private String roomNumber;
     private String email;
+
+    @OneToMany(mappedBy = "department")
+    @JsonBackReference
+    private List<Professor> professors = new ArrayList<>();
 
     public Department() {
     }
@@ -86,6 +93,18 @@ public class Department {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public List<Professor> getProfessors() {
+        return professors;
     }
 
     @Override

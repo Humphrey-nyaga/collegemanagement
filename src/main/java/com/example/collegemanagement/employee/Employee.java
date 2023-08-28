@@ -22,14 +22,14 @@ public class Employee {
      private String phoneNumber;
 
     @Enumerated(EnumType.STRING)
-    private EmployeeType employeeType;
+    private EmployeeRole employeeRole;
     @Enumerated(EnumType.STRING)
     private EmployeeContractType employeeContractType;
 
     public Employee() {
     }
 
-    public Employee(String firstName, String lastName, String middleName, String dob, String nationalID, String gender, String email, String phoneNumber, EmployeeType employeeType, EmployeeContractType employeeContractType) {
+    public Employee(String firstName, String lastName, String middleName, String dob, String nationalID, String gender, String email, String phoneNumber, EmployeeRole employeeRole, EmployeeContractType employeeContractType) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -38,7 +38,7 @@ public class Employee {
         this.gender = gender;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.employeeType = employeeType;
+        this.employeeRole = employeeRole;
         this.employeeContractType = employeeContractType;
     }
 
@@ -115,12 +115,12 @@ public class Employee {
         this.phoneNumber = phoneNumber;
     }
 
-    public EmployeeType getEmployeeType() {
-        return employeeType;
+    public EmployeeRole getEmployeeType() {
+        return employeeRole;
     }
 
-    public void setEmployeeType(EmployeeType employeeType) {
-        this.employeeType = employeeType;
+    public void setEmployeeRole(EmployeeRole employeeRole) {
+        this.employeeRole = employeeRole;
     }
 
     public EmployeeContractType getEmployeeContractType() {

@@ -29,6 +29,7 @@ public class DepartmentService {
     public void deleteDepartment(Long id) {
         departmentRepository.deleteById(id);
     }
+   //TODO : Implement updateDepartment() method correctly to enable addition of new department if not exists
     public Department updateDepartment(Department department) {
         Optional<Department> existingDepartment = departmentRepository.findById(department.getId());
         if (existingDepartment.isPresent()) {

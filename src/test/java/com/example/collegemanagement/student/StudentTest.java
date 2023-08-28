@@ -1,5 +1,6 @@
-package com.example.collegemanagement;
+package com.example.collegemanagement.student;
 
+import com.example.collegemanagement.student.Student;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;

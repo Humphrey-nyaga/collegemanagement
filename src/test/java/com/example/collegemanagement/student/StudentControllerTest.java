@@ -1,6 +1,9 @@
-package com.example.collegemanagement;
+package com.example.collegemanagement.student;
 
 import com.example.collegemanagement.exception.StudentNotFoundException;
+import com.example.collegemanagement.student.Student;
+import com.example.collegemanagement.student.StudentController;
+import com.example.collegemanagement.student.StudentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

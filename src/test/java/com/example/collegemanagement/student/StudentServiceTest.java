@@ -1,7 +1,10 @@
-package com.example.collegemanagement;
+package com.example.collegemanagement.student;
 
 import com.example.collegemanagement.exception.StudentExistsException;
 import com.example.collegemanagement.exception.StudentNotFoundException;
+import com.example.collegemanagement.student.Student;
+import com.example.collegemanagement.student.StudentRepository;
+import com.example.collegemanagement.student.StudentService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

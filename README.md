@@ -1,4 +1,4 @@
-## A Simple Student Data API
+## A Simple College Data API
 
 #### Built using Java Spring Boot
 
@@ -8,7 +8,7 @@ CREATE, READ, UPDATE nad DELETE records
 ## Getting Started
 Step 1: Clone the repository
 ```
-git clone https://github.com/Humphrey-nyaga/studentmanagement.git
+git clone https://github.com/Humphrey-nyaga/collegemanagement.git
 ```
 Step 2: navigate to the project repository
 ```

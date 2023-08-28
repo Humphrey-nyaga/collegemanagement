@@ -1,6 +1,7 @@
 package com.example.collegemanagement.department;
 
 import com.example.collegemanagement.employee.Professor;
+import com.example.collegemanagement.student.Student;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
@@ -24,7 +25,11 @@ public class Department {
 
     @OneToMany(mappedBy = "department")
     @JsonBackReference
-    private List<Professor> professors = new ArrayList<>();
+    private List<Professor> professors;
+
+    @OneToMany(mappedBy = "department")
+    @JsonBackReference
+    private List<Student> students;
 
     public Department() {
     }

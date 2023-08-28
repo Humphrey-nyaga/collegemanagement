@@ -1,5 +1,7 @@
 package com.example.collegemanagement.student;
 
+import com.example.collegemanagement.department.Department;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -18,6 +20,12 @@ public class Student {
     private Date dob;
 
     private String email;
+
+    @ManyToOne
+    @JoinColumn(name = "department_id")
+    @JsonManagedReference
+    private Department department;
+
 
     public Student(String name, String address, String major, Date dob, String email) {
         this.name = name;

@@ -1,4 +1,4 @@
-package com.example.collegemanagement.employee;
+package com.example.collegemanagement.professor;
 
 import com.example.collegemanagement.course.Course;
 import com.example.collegemanagement.department.Department;

@@ -1,4 +1,4 @@
-package com.example.collegemanagement.employee;
+package com.example.collegemanagement.professor;
 
 public enum Role {
     PROFESSOR,

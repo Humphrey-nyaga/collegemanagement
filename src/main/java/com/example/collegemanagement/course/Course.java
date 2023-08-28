@@ -1,12 +1,10 @@
 package com.example.collegemanagement.course;
 
 import com.example.collegemanagement.department.Department;
-import com.example.collegemanagement.employee.Professor;
+import com.example.collegemanagement.professor.Professor;
 import com.example.collegemanagement.semester.Semester;
-import com.example.collegemanagement.student.Student;
 import jakarta.persistence.*;
 
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -28,7 +26,6 @@ public class Course {
     @JoinColumn(name = "department_id")
     private Department department;
 
-    //course semester
    @ManyToOne
    @JoinColumn(name = "semester_id")
     private Semester semester;

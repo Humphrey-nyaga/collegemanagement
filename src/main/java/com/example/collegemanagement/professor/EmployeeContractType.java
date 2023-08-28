@@ -1,4 +1,4 @@
-package com.example.collegemanagement.employee;
+package com.example.collegemanagement.professor;
 
 public enum EmployeeContractType {
     FULL_TIME,

@@ -1,7 +1,7 @@
-package com.example.studentmanagement;
+package com.example.collegemanagement;
 
-import com.example.studentmanagement.exception.StudentExistsException;
-import com.example.studentmanagement.exception.StudentNotFoundException;
+import com.example.collegemanagement.exception.StudentExistsException;
+import com.example.collegemanagement.exception.StudentNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

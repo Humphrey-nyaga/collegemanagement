@@ -1,6 +1,6 @@
-package com.example.studentmanagement;
+package com.example.collegemanagement;
 
-import com.example.studentmanagement.exception.StudentNotFoundException;
+import com.example.collegemanagement.exception.StudentNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

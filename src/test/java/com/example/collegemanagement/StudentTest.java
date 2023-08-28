@@ -1,4 +1,4 @@
-package com.example.studentmanagement;
+package com.example.collegemanagement;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

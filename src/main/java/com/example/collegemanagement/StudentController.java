@@ -1,13 +1,11 @@
-package com.example.studentmanagement;
+package com.example.collegemanagement;
 
-import com.example.studentmanagement.exception.StudentExistsException;
-import com.example.studentmanagement.exception.StudentNotFoundException;
+import com.example.collegemanagement.exception.StudentNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/student")

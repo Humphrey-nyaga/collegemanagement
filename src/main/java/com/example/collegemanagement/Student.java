@@ -1,7 +1,6 @@
-package com.example.studentmanagement;
+package com.example.collegemanagement;
 
 import jakarta.persistence.*;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.util.Date;
 

@@ -3,6 +3,7 @@ package com.example.collegemanagement.employee;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,10 +21,15 @@ public class Employee {
     @Column(unique = true)
      private String phoneNumber;
 
+    @Enumerated(EnumType.STRING)
+    private EmployeeType employeeType;
+    @Enumerated(EnumType.STRING)
+    private EmployeeContractType employeeContractType;
+
     public Employee() {
     }
 
-    public Employee(String firstName, String lastName, String middleName, String dob, String nationalID, String gender, String email, String phoneNumber) {
+    public Employee(String firstName, String lastName, String middleName, String dob, String nationalID, String gender, String email, String phoneNumber, EmployeeType employeeType, EmployeeContractType employeeContractType) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
@@ -32,7 +38,10 @@ public class Employee {
         this.gender = gender;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.employeeType = employeeType;
+        this.employeeContractType = employeeContractType;
     }
+
 
     public long getId() {
         return id;
@@ -106,4 +115,19 @@ public class Employee {
         this.phoneNumber = phoneNumber;
     }
 
+    public EmployeeType getEmployeeType() {
+        return employeeType;
+    }
+
+    public void setEmployeeType(EmployeeType employeeType) {
+        this.employeeType = employeeType;
+    }
+
+    public EmployeeContractType getEmployeeContractType() {
+        return employeeContractType;
+    }
+
+    public void setEmployeeContractType(EmployeeContractType employeeContractType) {
+        this.employeeContractType = employeeContractType;
+    }
 }

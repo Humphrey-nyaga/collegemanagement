@@ -2,6 +2,7 @@ package com.example.collegemanagement.course;
 
 import com.example.collegemanagement.department.Department;
 import com.example.collegemanagement.employee.Professor;
+import com.example.collegemanagement.semester.Semester;
 import com.example.collegemanagement.student.Student;
 import jakarta.persistence.*;
 
@@ -18,13 +19,20 @@ public class Course {
     private String name;
     private String description;
     private int credits;
+    private int maxEnrollment;
+
     @ManyToOne
     @JoinColumn(name = "instructor_id")
     private Professor instructor;
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
-    private int maxEnrollment;
+
+    //course semester
+   @ManyToOne
+   @JoinColumn(name = "semester_id")
+    private Semester semester;
+
 
     public Course() {
     }

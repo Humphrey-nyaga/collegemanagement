@@ -1,8 +1,12 @@
 package com.example.collegemanagement.employee;
 
+import com.example.collegemanagement.course.Course;
 import com.example.collegemanagement.department.Department;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "professor")
@@ -30,6 +34,10 @@ public class Professor {
     @JoinColumn(name = "department_id")
     @JsonManagedReference
     private Department department;
+
+    @OneToMany(mappedBy = "instructor")
+    @JsonBackReference
+    private List<Course> courses;
 
     public Professor() {
     }
